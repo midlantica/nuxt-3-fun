@@ -16,13 +16,13 @@
 </template>
 
 <script setup>
-  const isLoggedIn = useIsLoggedIn()
+  const user = useUser()
   definePageMeta({
-    layout: `plain`
+    layout: "plain"
   })
 
   const login = () => {
-    isLoggedIn.value = true
+    user.isLoggedIn = true
     useRouter().push("/")
   }
 </script>

@@ -2,6 +2,17 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
+  modules: [
+    [
+      "@pinia/nuxt",
+      {
+        autoImports: ["defineStore", "acceptHMRUpdate"],
+      },
+    ],
+  ],
+  imports: {
+    dirs: ["stores"],
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
