@@ -1,16 +1,16 @@
 <template>
-  <div>
-    <h1>Login</h1>
-    <form @submit.prevent="login">
+  <div class="flex flex-col flex-auto max-w-[500px] m-auto place-content-center min-h-[200px] pt-32 pb-48">
+    <h1 class="mb-6 text-3xl font-bold">Login</h1>
+    <form class="flex gap-6" @submit.prevent="login">
       <label>
-        Username
-        <input type="text">
+        <p class="leading-loose">Username</p>
+        <input class="px-4 py-2 border" type="text">
       </label>
       <label>
-        Password
-        <input type="password">
+        <p class="leading-loose">Password</p>
+        <input class="px-4 py-2 border" type="password">
       </label>
-      <button>Login</button>
+      <button class="self-end px-6 py-2 text-white border bg-sky-900 max-h-12">Login</button>
     </form>
   </div>
 </template>
