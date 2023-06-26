@@ -43,7 +43,7 @@
 <script setup>
   const route = useRoute()
 
-  const { data, error } = await useFetch(`http://www.omdbapi.com/?apikey=7ec30ddd&i=${route.params.id}`, {
+  const { data, error } = await useFetch(`https://www.omdbapi.com/?apikey=7ec30ddd&i=${route.params.id}`, {
     pick: ['Poster', 'Title', 'Year', 'Rated', 'Released', 'Genre', 'Director', 'Writer', 'Actors', 'Plot', 'Error'],
     key: `/movies/${route.params.id}`
   })

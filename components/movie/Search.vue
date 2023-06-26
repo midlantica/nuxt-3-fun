@@ -20,7 +20,7 @@
 
   async function search() {
     const { Search } = await $fetch(
-      `http://www.omdbapi.com/?apikey=7ec30ddd&s=${query.value}`
+      `https://www.omdbapi.com/?apikey=7ec30ddd&s=${query.value}`
     )
     movies.value = Search
   }
