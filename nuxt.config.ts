@@ -13,6 +13,12 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["stores"],
   },
+  routeRules: {
+    "/spa": { ssr: false },
+    // "/ssr": { ssr: true },
+    "/swr": { swr: true },
+    "/static": { static: true }
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
